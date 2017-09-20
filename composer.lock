@@ -4,20 +4,101 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "08acb023162d6eaa60d8374dea433350",
+    "content-hash": "2dd5a6a9f5f825f35527c300e8accd95",
     "packages": [
         {
-            "name": "aws/aws-sdk-php",
-            "version": "3.36.6",
+            "name": "auth0/auth0-php",
+            "version": "5.0.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "a7cd486139971d66387a4938f5a0a2a95e50d678"
+                "url": "https://github.com/auth0/auth0-PHP.git",
+                "reference": "5d0c548b90021c2249befa8ba41057b84dc77036"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a7cd486139971d66387a4938f5a0a2a95e50d678",
-                "reference": "a7cd486139971d66387a4938f5a0a2a95e50d678",
+                "url": "https://api.github.com/repos/auth0/auth0-PHP/zipball/5d0c548b90021c2249befa8ba41057b84dc77036",
+                "reference": "5d0c548b90021c2249befa8ba41057b84dc77036",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "firebase/php-jwt": "^4.0",
+                "guzzlehttp/guzzle": "~6.0",
+                "php": "^5.5 || ^7.0"
+            },
+            "require-dev": {
+                "josegonzalez/dotenv": "^2.0",
+                "phpunit/phpunit": "^4.8 || ^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Auth0\\SDK\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Auth0",
+                    "email": "support@auth0.com",
+                    "homepage": "http://www.auth0.com/"
+                }
+            ],
+            "description": "Auth0 PHP SDK.",
+            "time": "2017-08-30T19:48:35+00:00"
+        },
+        {
+            "name": "auth0/login",
+            "version": "5.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auth0/laravel-auth0.git",
+                "reference": "ff199a47eeaf46278c38f7f55923c370e8ed88f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auth0/laravel-auth0/zipball/ff199a47eeaf46278c38f7f55923c370e8ed88f5",
+                "reference": "ff199a47eeaf46278c38f7f55923c370e8ed88f5",
+                "shasum": ""
+            },
+            "require": {
+                "auth0/auth0-php": "^5.0.0",
+                "illuminate/contracts": "5.*",
+                "illuminate/support": "5.*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/controllers",
+                    "src/facade"
+                ],
+                "psr-0": {
+                    "Auth0\\Login\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel plugin that helps authenticate with the auth0 service",
+            "time": "2017-02-23T20:10:55+00:00"
+        },
+        {
+            "name": "aws/aws-sdk-php",
+            "version": "3.36.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "0420dcbb004e45a1f29f2084db6396c573d20bf5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/0420dcbb004e45a1f29f2084db6396c573d20bf5",
+                "reference": "0420dcbb004e45a1f29f2084db6396c573d20bf5",
                 "shasum": ""
             },
             "require": {
@@ -84,7 +165,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-09-12T17:09:10+00:00"
+            "time": "2017-09-14T21:13:25+00:00"
         },
         {
             "name": "darkaonline/l5-swagger",
@@ -525,6 +606,49 @@
             "time": "2017-06-15T17:19:42+00:00"
         },
         {
+            "name": "firebase/php-jwt",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "dccf163dc8ed7ed6a00afc06c51ee5186a428d35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/dccf163dc8ed7ed6a00afc06c51ee5186a428d35",
+                "reference": "dccf163dc8ed7ed6a00afc06c51ee5186a428d35",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "time": "2016-07-18T04:51:16+00:00"
+        },
+        {
             "name": "guzzlehttp/guzzle",
             "version": "6.3.0",
             "source": {
@@ -794,16 +918,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.3",
+            "version": "v5.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "779a98d3b2ebed2128db1a668dcc10a65c9b01be"
+                "reference": "d3e0493bead126cf7fb9a005c64e6b58a9190e51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/779a98d3b2ebed2128db1a668dcc10a65c9b01be",
-                "reference": "779a98d3b2ebed2128db1a668dcc10a65c9b01be",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d3e0493bead126cf7fb9a005c64e6b58a9190e51",
+                "reference": "d3e0493bead126cf7fb9a005c64e6b58a9190e51",
                 "shasum": ""
             },
             "require": {
@@ -922,7 +1046,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-09-07T13:50:21+00:00"
+            "time": "2017-09-13T13:36:29+00:00"
         },
         {
             "name": "laravel/tinker",

@@ -62,3 +62,9 @@ Route::post('/test/db', function(Request $request) {
 
     return $order;
 });
+
+Route::get('/private', function (Request $request) {
+    $jwtUser = \Auth0\Login\facade\Auth0::jwtUser();
+    $user = \Illuminate\Support\Facades\Auth::user();
+    return response()->json($user);
+})->middleware('auth0.jwt');
